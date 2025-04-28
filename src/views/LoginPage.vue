@@ -40,16 +40,59 @@ function handleLogin() {
 </script>
 
 <style scoped>
-.login {
-  max-width: 300px;
-  margin: 2rem auto;
+/* Ensure body takes up full height and remove overflow */
+body, html {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scroll */
 }
+
+.login {
+  max-width: 400px;
+  margin:  auto; /* Center horizontally */
+  margin-top: 200px;
+  padding: 20px;
+  background-color: gray;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Let it adjust based on content */
+  box-sizing: border-box; /* Include padding in element's total width and height */
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+}
+
 input {
   display: block;
   width: 100%;
+  padding: 0.8rem;
   margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
+
+button {
+  padding: 0.8rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem; /* Add some margin above the button */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 .error {
   color: red;
+  font-size: 0.9rem;
+  margin-top: 1rem;
 }
 </style>
+
